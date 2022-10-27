@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MSSQL_SA_PASSWORD="G@tos123?"
+MSSQL_SA_PASSWORD="G@tos123"
 CONTAINER_NAME="sql1"
 CONTAINER_HOSTNAME="sql1"
 IMAGE="mcr.microsoft.com/mssql/server"
@@ -32,3 +32,5 @@ then
     sudo docker restart $CONTAINER_NAME
 fi
 
+echo "Iniciando cliente do MSSQL"
+docker exec -it $CONTAINER_NAME /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "$MSSQL_SA_PASSWORD"
