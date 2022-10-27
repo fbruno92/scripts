@@ -1,0 +1,1 @@
+Conjunto de estudos, ferramentas e experimentações usando BASH script 
